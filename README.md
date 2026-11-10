@@ -56,7 +56,9 @@ Video clips cost $0.016 per second (480p) or $0.04 per second (768p).
 
 ## Options
 
-`--model`, `--orientation portrait|square|landscape`, `--out FILE`, `--no-enhance` (send the prompt exactly as written), `--allow-nsfw`. Mature output is **off by default** in this skill; the agent passes `--allow-nsfw` only when you ask for it.
+`--model`, `--orientation portrait|square|landscape`, `--out FILE`, `--no-enhance` (send the prompt exactly as written).
+
+AnimeAPI does not generate adult content. Explicit prompts are refused and not charged.
 
 ## Prefer MCP?
 

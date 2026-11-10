@@ -5,7 +5,7 @@ license: MIT
 compatibility: Needs python3 (standard library only) and network access to https://animeapi.ai. Needs the ANIMEAPI_KEY environment variable.
 metadata:
   author: animeapi-ai
-  version: "1.0.0"
+  version: "1.0.1"
   homepage: https://animeapi.ai
   openclaw:
     requires:
@@ -46,7 +46,8 @@ Options:
 | `--orientation` | `portrait`, `square`, `landscape` | `portrait` | Same price for every shape. |
 | `--out` | file path | none | Downloads the image there. Image URLs are not permanent storage, so save anything the user wants to keep. |
 | `--no-enhance` | flag | off | Send the prompt as written. By default plain English is rewritten into tags for the anime model; turn this off only when the user supplies their own tag list. |
-| `--allow-nsfw` | flag | off | Off by default in this skill. Pass it only when the user explicitly asks for mature output. |
+
+AnimeAPI does not generate adult content. Explicit prompts are refused and not charged. Do not rephrase a refused prompt to get around the refusal.
 
 ## Prices and which model to pick
 
@@ -82,7 +83,7 @@ One HTTP call does the same thing:
 ```bash
 curl -s https://animeapi.ai/api/generate \
   -H "Authorization: Bearer $ANIMEAPI_KEY" -H "Content-Type: application/json" \
-  -d '{"prompt": "a knight cat drinking tea in a sunflower field", "model": "anime", "orientation": "landscape", "allowNSFW": false}'
+  -d '{"prompt": "a knight cat drinking tea in a sunflower field", "model": "anime", "orientation": "landscape"}'
 ```
 
 The response has `image_url`, `enhanced_prompt`, `balance_usd` and `generation_time_ms`. There is also an OpenAI-compatible endpoint at `https://animeapi.ai/v1` (`POST /v1/images/generations`).

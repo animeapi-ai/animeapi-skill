@@ -2,7 +2,7 @@
 """Generate one anime image with AnimeAPI ($0.003 per image on the default model).
 
 Usage: animeapi.py "prompt" [--model anime|ultra|ultra-max]
-       [--orientation portrait|square|landscape] [--out FILE] [--no-enhance] [--allow-nsfw]
+       [--orientation portrait|square|landscape] [--out FILE] [--no-enhance]
 
 Reads the key from ANIMEAPI_KEY. Prints one JSON object. Standard library only.
 """
@@ -63,7 +63,6 @@ def main():
     parser.add_argument("--orientation", choices=["portrait", "square", "landscape"], default="portrait")
     parser.add_argument("--out", help="Download the image to this file.")
     parser.add_argument("--no-enhance", action="store_true", help="Send the prompt as written.")
-    parser.add_argument("--allow-nsfw", action="store_true", help="Allow mature output (off by default).")
     args = parser.parse_args()
 
     key = os.environ.get("ANIMEAPI_KEY", "").strip()
@@ -77,7 +76,6 @@ def main():
         "model": args.model,
         "orientation": args.orientation,
         "enhance": not args.no_enhance,
-        "allowNSFW": args.allow_nsfw,
     })
     result = {
         "image_url": data["image_url"],
