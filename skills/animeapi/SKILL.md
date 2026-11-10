@@ -33,7 +33,7 @@ python3 scripts/animeapi.py "a knight cat drinking tea in a sunflower field" --o
 It prints one JSON object:
 
 ```json
-{"image_url": "https://animeapi.ai/cdn/...", "saved_to": "knight-cat.webp", "model": "anime", "cost_usd": 0.003, "balance_usd": 4.99, "enhanced_prompt": "...", "generation_time_ms": 4100}
+{"image_url": "https://animeapi.ai/i/….webp", "saved_to": "knight-cat.webp", "model": "anime", "cost_usd": 0.003, "balance_usd": 4.99, "enhanced_prompt": "...", "generation_time_ms": 4100}
 ```
 
 Show the user the image (the saved file, or the URL as a markdown image) and mention the cost when they generate more than a few.

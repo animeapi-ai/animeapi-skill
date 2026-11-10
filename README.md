@@ -41,7 +41,7 @@ python3 skills/animeapi/scripts/animeapi.py "a knight cat drinking tea in a sunf
 ```
 
 ```json
-{"image_url": "https://animeapi.ai/cdn/...", "model": "anime", "orientation": "landscape", "cost_usd": 0.003, "balance_usd": 4.99, "saved_to": "knight-cat.webp"}
+{"image_url": "https://animeapi.ai/i/….webp", "model": "anime", "orientation": "landscape", "cost_usd": 0.003, "balance_usd": 4.99, "saved_to": "knight-cat.webp"}
 ```
 
 ## Prices
